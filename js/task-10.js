@@ -7,7 +7,7 @@ const buttonCreate = document.querySelector('[data-create]');
 const buttonDestroy = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
-let amount = 0;
+let amount = 10;
 
 const numberOfBoxes = () => {
   amount = input.value;
