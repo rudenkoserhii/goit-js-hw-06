@@ -6,35 +6,37 @@ const input = document.querySelector('input');
 // const button = document.querySelector('#controls > button');
 
 const buttonCreate = document.querySelector('[data-create]');
-// const buttonDestroy = document.querySelector('[data-destroy]');
+const buttonDestroy = document.querySelector('[data-destroy]');
 const boxes = document.querySelector('#boxes');
 
-let amount = 2
+let amount = 0;
 
 const numberOfBoxes = () => {
-  return input.value;
+  amount = input.value;
   };
-
-// amount = numberOfBoxes();
-
-// button.addEventListener('click', amount);
-
-
 
 buttonCreate.addEventListener('click', numberOfBoxes);
 
-// amount = numberOfBoxes();
+const removeBxes = () => {
+  amount = 0;
+};
+
+buttonDestroy.addEventListener('click', removeBxes);
 
 function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     const divBox = document.createElement("div");
-    divBox.style.width = "10px";
-    divBox.style.heigth = "10px";
+    const boxWidth = (10 + [i] * 10);
+    const boxHeight = (10 + [i] * 10);
+    divBox.style.width = `${boxWidth}px`;
+    divBox.style.height = `${boxHeight}px`;
     divBox.style.backgroundColor = `${getRandomHexColor()}`;
     boxes.append(divBox);
 }
 };
 
-createBoxes(numberOfBoxes());
+createBoxes(amount);
+
+
 
 
