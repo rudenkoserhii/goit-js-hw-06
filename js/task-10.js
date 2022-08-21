@@ -16,7 +16,7 @@ const numberOfBoxes = () => {
 buttonCreate.addEventListener('click', numberOfBoxes);
 
 const removeBoxes = () => {
-  createBoxes(0);
+  boxes.innerHTML = '';
 };
 
 buttonDestroy.addEventListener('click', removeBoxes);
@@ -31,6 +31,10 @@ function createBoxes(amount) {
     divBox.style.backgroundColor = `${getRandomHexColor()}`;
     boxes.append(divBox);
 }
+};
+
+function destroyBoxes() {
+  
 };
 
 // createBoxes(amount);
