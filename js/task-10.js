@@ -22,8 +22,8 @@ buttonDestroy.addEventListener('click', removeBoxes);
 function createBoxes(amount) {
   for (let i = 0; i < amount; i += 1) {
     const divBox = document.createElement("div");
-    const boxWidth = (10 + [i] * 10);
-    const boxHeight = (10 + [i] * 10);
+    const boxWidth = (30 + [i] * 10);
+    const boxHeight = (30 + [i] * 10);
     divBox.style.width = `${boxWidth}px`;
     divBox.style.height = `${boxHeight}px`;
     divBox.style.backgroundColor = `${getRandomHexColor()}`;
@@ -64,8 +64,8 @@ function destroyBoxes() {
   
 //   for (let i = previous; i < (previous + amount); i += 1) {
 //     const divBox = document.createElement("div");
-//     const boxWidth = (10 + i * 10);
-//     const boxHeight = (10 + i * 10);
+//     const boxWidth = (30 + i * 10);
+//     const boxHeight = (30 + i * 10);
 //     divBox.style.width = `${boxWidth}px`;
 //     divBox.style.height = `${boxHeight}px`;
 //     divBox.style.backgroundColor = `${getRandomHexColor()}`;
